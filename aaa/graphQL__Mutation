@@ -1,0 +1,49 @@
+/app/graphql/mutations/base_mutation.rb
+
+module Mutations
+  class BaseMutation < GraphQL::Schema::Mutation
+    # argument_class Types::BaseArgument
+    # field_class Types::BaseField
+    # input_object_class Types::BaseInputObject
+    # object_class Types::BaseObject
+    null false
+  end
+end
+
+
+
+ADD:
+mutation {
+	createBook(
+		title: "Tipwire"
+		authorId: 2
+		publicationDate: 1999
+		genre: Thriller
+	) {
+		id
+		title
+	}
+}
+
+
+
+UPDATE:
+mutation {
+	updateBook(id: 18
+	title: "ESTO SUSTITUYE AL TITULO" 
+	) {
+		id
+		title
+	}
+}
+
+
+
+DESTROY:
+mutation {
+	destroyBook(id: 18) {
+		id
+		title
+	}
+}
+

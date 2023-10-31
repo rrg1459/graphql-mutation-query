@@ -1,0 +1,106 @@
+{
+	books {
+		title
+		author {
+			lastName
+		}
+	}
+}
+
+
+{
+	author(id: 2) {
+		firstName
+		lastName
+		dateOfBirth
+		books {
+			title
+			genre
+		}
+	}
+}
+
+
+{
+	author(id: 2) {
+		firstName
+		lastName
+		books {
+			title
+		}
+	}
+}
+
+
+###################################
+
+mutation {
+	addJornada(input: {
+		grupoId: 1
+		fecha: "2021-03-13"
+		nombre: "Rafael R"
+		estatus: "R"
+	}) {
+		id
+		estatus
+		nombre
+	} 
+}
+
+
+############################################
+{
+	"data": {
+		"createBook": {
+			"id": "9",
+			"title": "Tipwire"
+		}
+	}
+}
+
+############################################
+mutation {
+	createAuthor(input: {
+		firstName: "este es mi nombre"
+		lastName: "estes es mi apellido"
+		dateOfBirth: "20210315"
+	}) {
+		id
+		firstName
+		lastName
+	}
+}
+
+
+############################################
+
+mutation {
+	createContacto(input: {
+	  nombre: "Este es mi nombre"
+	  correo: "Este es mi correo"
+	  asunto: "Este es mi asunto"
+	  mensaje: "Este es mi mensaje"
+	  ip: "esta es mi IP"
+	  
+	}) {
+	  id
+	}
+}
+############################################
+
+
+mutation {
+createContacto(
+	  nombre: "Este es mi nombre 99"
+	  correo: "Este es mi correo 99"
+	  asunto: "Este es mi asunto 99"
+	  mensaje: "Este es mi mensaje 99"
+	  ip: "esta es mi IP 99"
+) {
+  id
+  asunto
+}
+}
+
+
+
